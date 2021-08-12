@@ -1,0 +1,22 @@
+body {
+    background: rgb(66, 135, 245) !important;
+    color: rgb(222, 222, 222) !important;
+}
+
+#content {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#message {
+    margin: 20px 0px 20px 0px;
+}
+
+#start-game {
+    margin-top: 10px;
+}
+
+#wait-button {
+    display: block;
+    margin-top: 10px;
+}

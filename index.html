@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+
+    <!-- importing bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Blackjack</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Blackjack</h1>
+    <div id="content">
+        <h2 id="message">Press To Start</h2>
+        <div id="pre-game">
+            <button onclick="startGame();" id="start-game">Start Game</button>
+        </div>
+        <div id="real-game" style="display: none;">
+            <div id="player">
+                <h3>Cards:</h3>
+                <p id="player-cards"></p>
+                <h3>Score</h3>
+                <p id="player-score"></p>
+                <div id="player-buttons">
+                    <button id="card-button" onclick="playerTurn(false);">Draw</button>
+                    <button onclick="dealerTurn();" id="wait-button">End Turn</button>
+                </div>
+            </div>
+            <div id="dealer" style="display: none;"> 
+                <h3>Dealer Cards: </h3>
+                <p id="dealer-cards"></p>
+                <h3>Dealer Score: </h3>
+                <p id="dealer-score"></p>  
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
