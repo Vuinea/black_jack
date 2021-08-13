@@ -17,6 +17,8 @@ if (card1 === 11 && card1 + card2 > 21) {
 
 var playerCards = [stringCard1, " " + stringCard2];
 var playerOverallScore = card1 + card2;
+document.getElementById("player-cards").innerHTML = `<div class='card-body'><div class='card-num-red'><p class='num'>${stringCard1}</p></div></div>1;` +`<div class='card-body'><div class='card-num-red'><p class='num'>${stringCard2}</p></div></div>1;`
+
 
 card1 = Math.floor(Math.random() * 11) + 1;
 card2 = Math.floor(Math.random() * 11) + 1; 
@@ -34,10 +36,6 @@ if (card1 === 11 && card1 + card2 > 21) {
 }  
 var dealerCards = [stringCard1, " " + stringCard2];
 var dealerOverallScore = card1 + card2;
-
-
-
-
 
 function startGame() {
     document.getElementById("pre-game").style.display = "none" ; 
@@ -57,13 +55,13 @@ function playerTurn(start) {
         } else if (newCard === 11 && playerOverallScore + newCard > 21) {
             newCard = 1;
             stringNewCard = "11 (now 1)";   
+        
         }   
-
+        document.getElementById("player-cards").innerHTML += `<div class='card-body'><div class='card-num-red'><p class='num'>${stringNewCard}</p></div></div>;`
         playerCards.push(" " +  stringNewCard);
         playerOverallScore += newCard; 
     }
     
-    document.getElementById("player-cards").textContent = playerCards;
     document.getElementById("player-score").textContent = playerOverallScore; 
 
     if (playerOverallScore < 17) {  
